@@ -6,14 +6,129 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <Button
+        android:id="@+id/btn_left_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="Left"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_right_light"
+        app:layout_constraintEnd_toStartOf="@+id/text1" />
+
+
+    <Button
+        android:id="@+id/btn_right_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="88dp"
+        android:text="Right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_pos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginBottom="124dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/btn_right"
+        app:layout_constraintStart_toStartOf="@+id/btn_left_light"
+        app:layout_constraintTop_toBottomOf="@+id/text1" />
+
     <TextView
         android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="368dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/tv_pos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/img_pos"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="424dp"
+        android:src="@drawable/my_pos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_camera"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="420dp"
+        android:src="@drawable/camera"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.734"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/img_controller"-->
+    <!--        android:layout_width="200dp"-->
+    <!--        android:layout_height="200dp"-->
+    <!--        android:layout_marginBottom="95dp"-->
+    <!--        android:src="@drawable/cross"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        android:clickable="false"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <Button
+        android:id="@+id/btn_up"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@android:color/black"
+        android:text="sdf"
+        app:layout_constraintBottom_toTopOf="@+id/btn_right"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_left"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+
+        android:layout_marginEnd="56dp"
+        android:background="@android:color/black"
+        android:text="sdf"
+        app:layout_constraintEnd_toEndOf="@+id/btn_up"
+        app:layout_constraintTop_toBottomOf="@+id/btn_up" />
+
+    <Button
+        android:id="@+id/btn_right"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="153dp"
+        android:background="@android:color/black"
+        android:text="sdf"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btn_up"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pos" />
+
+    <Button
+        android:id="@+id/btn_down"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/black"
+        android:text="sdf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_left" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
