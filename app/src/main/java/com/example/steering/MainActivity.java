@@ -17,7 +17,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String SERVER_IP = "192.168.38.16"; // 서버의 IP 주소
+    private static final String SERVER_IP = "192.168.38.16"; // 서버의 IP 주소(라즈베리파이)
     private static final int SERVER_PORT = 10123; // 서버가 listening 중인 포트 번호
 
     private Map<Button, String> buttonMessageMap;
