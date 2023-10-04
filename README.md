@@ -9,7 +9,7 @@
 1line_socket_final.py(PC) 와 move_final.py(리눅스) 의 HOST와 PORT를 PC의 IP,PORT로 바꾸어야한다.
 
 # 소켓 관계도
-
+![socket_realation](https://github.com/bubblydummy/Steering/assets/126440604/c49ccb41-63ea-4476-b51d-4d6d083c56b3)
 
 # 기계 관련 주의점
 
