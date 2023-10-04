@@ -1,6 +1,8 @@
 package com.example.steering;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,16 +19,23 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String SERVER_IP = "192.168.38.16"; // 서버의 IP 주소(라즈베리파이)
-    private static final int SERVER_PORT = 10123; // 서버가 listening 중인 포트 번호
+    private static String SERVER_IP; // 서버의 IP 주소(라즈베리파이)
+    private static int SERVER_PORT = 10123; // 서버가 listening 중인 포트 번호
 
     private Map<Button, String> buttonMessageMap;
 
+    private String rasp_port;
     TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //앞화면에서 받아온 ip와 port 저장
+        Intent intent = getIntent();
+        SERVER_IP = intent.getStringExtra("rasp_ip");
+        rasp_port = intent.getStringExtra("rasp_port");
+        SERVER_PORT=Integer.parseInt(rasp_port);
 
         // 버튼과 메시지 매핑 초기화
         buttonMessageMap = new HashMap<>();
@@ -65,15 +74,12 @@ public class MainActivity extends AppCompatActivity {
         public void run() {
 
             try{
-
-
                 Socket socket = new Socket(SERVER_IP, SERVER_PORT); // 소켓 열어주기
 
                 //메시지 전송
                 OutputStream outputStream = socket.getOutputStream();
                 outputStream.write(message.getBytes());
                 outputStream.flush();
-
 
                 //소켓 닫기
                 socket.close();
